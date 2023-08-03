@@ -1,0 +1,14 @@
+.nosotros-card:hover
+.onhover{
+    display: none;
+}
+.nosotros-card:hover
+.second-card{
+    transform: translateY(-450px);
+}
+.nosotros-card{
+    transition: .8s ease-in-out transform;
+}
+.second-card{
+    transition: .8s ease-in-out transform;
+}

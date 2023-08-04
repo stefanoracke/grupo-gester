@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Navbar from '../atoms/navbar'
+import Navbar from '../atoms/Navbar'
 import HeroSection from '../home_sections/section1.hero'
 import DescriptionSection from '../home_sections/section2.description'
 import MisionSection from '../home_sections/section3.mision'

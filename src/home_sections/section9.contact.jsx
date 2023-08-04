@@ -2,6 +2,9 @@ import React from 'react'
 import { Input, Textarea } from '../atoms/Input'
 import ButtonGrey from '../atoms/ButtonGrey'
 
+import person from '/src/assets/icons/person.svg'
+import asunto from '/src/assets/icons/asunto.svg'
+
 export default function ContactSection() {
   return (
     <div className='flex justify-center flex-col  relative  items-center'>
@@ -77,10 +80,10 @@ export default function ContactSection() {
         <div className="col-span-2 md:col-span-1 md:pt-0 pt-10">
           <div className="flex w-full flex-wrap gap-8">
             <div className="w-full sm:w-[46%]">
-              <Input type='text' placeHolder="Nombre" />
+              <Input type='text' placeHolder="Nombre" icon={person}/>
             </div>
             <div className="w-full sm:w-[46%]">
-              <Input type='text' placeHolder="Asunto" />
+              <Input type='text' placeHolder="Asunto" icon={asunto}/>
             </div>
             <div className="w-full sm:w-[46%]">
               <Input type='number' placeHolder="Télefono" />

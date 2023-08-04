@@ -18,7 +18,8 @@ export default function MainCards(
         <div 
         style={{height:{sizeIcon},width:{sizeIcon}}}
         className={`flex justify-center items-center bg-white rounded-full p-3 mb-4`}>
-            {icon}
+            <img className='w-[60px] h-[60px]' src={icon} alt="" />
+            
         </div>
 
         <h2 

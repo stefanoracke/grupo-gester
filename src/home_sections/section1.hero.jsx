@@ -1,4 +1,5 @@
 import React from 'react'
+import video1 from '/src/assets/videoportada-gester.mp4'
 
 export default function HeroSection() {
   return (
@@ -14,9 +15,10 @@ export default function HeroSection() {
       <video 
       autoPlay
       loop
+      src={video1}
       className='absolute top-0 left-0 h-full  pt-[106px] w-full object-cover'
       >
-        <source src="https://s3-figma-videos-production-sig.figma.com/video/1107046701434361969/TEAM/3f5f/1d23/-cf54-45f3-8ca8-0b4701a4db4c?Expires=1691971200&amp;Signature=nfgu-QvsejNf~jHcDLS91ONkHnQGVg-pyHsCx8-Gnbyc3osmp96dQk8tWkhABIH07XY8y-FYlUCa88qjqd6Flfc9K6jVKYQPjyoYrLUjIRcjhJuj5LlbAsGfL1kONrpZncE63M95gHBaSIKx-z40gntW0gQ7qnFcFNbL3E24TIJEEkuYUZz~PLSsl2-5YMmLIwKKw7QB7DLwgLk~dzcQ8VrWSKRHN1l~WAJVeeRecR1S7OVN2JmlP3SNjksKbHx7PfedA-xsGi3lAiqNSUHfEaFy8gdgZuxle4PZcHeI-IE4tMlTOS1U~x~9It9J0BKiBgua56IRy4asSwXtLynWqg__&amp;Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" type="video/mp4"></source>
+        <source  type="video/mp4"></source>
       </video>
     </div>
   )

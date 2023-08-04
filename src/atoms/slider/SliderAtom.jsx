@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 
 import ImgContainer from './imgContainer'
 
+import slide1 from '/src/assets/slides/2.png'
+import slide2 from '/src/assets/slides/1.png'
+import slide3 from '/src/assets/slides/3.png'
+
 export default function SliderAtom() {
     const [active,setActive] = useState(1)
 
@@ -10,17 +14,17 @@ export default function SliderAtom() {
             {
                 name: 'Edificio Tower Sur',
                 text: 'Obra culminada en Septiembre de 2022.',
-                image: 'src/assets/slides/2.png'
+                image: slide1
             },
             {
                 name: 'Torre Flus',
                 text: 'Obra culminada en Diciembre de 2022.',
-                image: 'src/assets/slides/1.png'
+                image: slide2
             },
             {
                 name: 'ODOGAN',
                 text: 'Fecha de Finalización: Junio 2023.',
-                image: 'src/assets/slides/3.png'
+                image: slide3
             }    
     ]
     return (

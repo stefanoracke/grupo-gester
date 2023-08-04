@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import MisionCards from '../atoms/MisionCards'
-import GesterLogo from '../atoms/Icons/GesterLogo'
+import quienes from '/src/assets/icons/icon-quienes-mision.svg'
+import mision from '/src/assets/icons/icon-mision-mision.svg'
+import valores from '/src/assets/icons/icon-valores-mision.svg'
+import vision from '/src/assets/icons/icon-vision-mision.svg'
 
 export default function MisionSection() {
   const [active, setActive] = useState(0)
@@ -8,7 +11,7 @@ export default function MisionSection() {
     {
       title: 'Quiénes somos',
       textColor:null,
-      icon: <GesterLogo size={20}/>,
+      icon: quienes,
       bgColor: 'linear-gradient(90deg, #186B99 0%, #22A5AB 100%)',
       text1: 'Un equipo interdisciplinario listo para accionar. Acompañamos y gestionamos Salvatajes y Desarrollos Inmobiliarios, ayudando a empresas y familias en la recuperación de inmuebles e inversiones.',
       text2: '<strong>Creemos que existe una solución</strong>, aún en casos complejos, por eso nos adentramos de manera profesional y transparente en cada desafío que asumimos.<strong> Te invitamos a que nos conozcas.</strong>'
@@ -16,7 +19,7 @@ export default function MisionSection() {
     {
       title: 'Misión',
       textColor:null,
-      icon: <GesterLogo size={20}/>,
+      icon: mision,
       bgColor: '#186B99',
       text1: '<strong>Nos moviliza recuperar el valor de tus inversiones</strong>, poniendo en primer lugar tus necesidades y derechos.',
       text2: 'Por eso, desde 2021 gestionamos soluciones integrales, abordando problemáticas inmobiliarias y financieras complejas, con más de 200 casos de éxito. '
@@ -24,7 +27,7 @@ export default function MisionSection() {
     {
       title: 'Visión',
       textColor:null,
-      icon: <GesterLogo size={20}/>,
+      icon: vision,
       bgColor: '#0F206C',
       text1: '<strong>No creemos en casos perdidos</strong>. Nos motiva saber que de manera integral y en equipo podemos dar respuesta a situaciones complejas.',
       text2: 'Por eso <strong>nos dedicamos a gestar soluciones</strong>, con el compromiso y la satisfacción de acercar a más personas y empresas a su objetivo.'
@@ -32,7 +35,7 @@ export default function MisionSection() {
     {
       title: 'Valores',
       textColor:'#0F206C',
-      icon: <GesterLogo size={20}/>,
+      icon: valores,
       bgColor: '#ffffff',
       text1: 'Estamos comprometidos desde la transparencia en la gestión de cada cliente. Nos motiva ser una <strong>garantía seria y profesional</strong>, para que transformes un desafío en un objetivo alcanzado.',
       text2: null
@@ -45,7 +48,7 @@ export default function MisionSection() {
   }
 
   return (
-    <div className='w-full    pb-[15vh] flex'>
+    <div className='w-full pb-[15vh] flex'>
       <div className="px-[10rem] w-full h-full overflow-hidden items-center flex justify-center flex-col relative">
         <div className="w-fit ">
 

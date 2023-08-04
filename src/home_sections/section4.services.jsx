@@ -1,6 +1,9 @@
 import React from 'react'
 import MainCards from '../atoms/mainCards'
-import GesterLogo from '../atoms/Icons/GesterLogo'
+import gif1 from '/src/assets/Gifs/gif1.gif'
+import gif2 from '/src/assets/Gifs/gif2.gif'
+import gif3 from '/src/assets/Gifs/gif3.gif'
+import gif4 from '/src/assets/Gifs/gif4.gif'
 
 export default function ServicesSection() {
 
@@ -9,25 +12,25 @@ export default function ServicesSection() {
       sizeIcon: '80px',
       title: 'Resguardar tus bienes y derechos',
       description: 'Eliminamos la incertidumbre empresarial, brindandote soporte y monitoreo de los procesos en tiempo real.',
-      icon: <GesterLogo size={50} />
+      icon: gif1
     },
     {
       sizeIcon: '80px',
       title: 'Recuperar tu inversión',
       description: 'Nos encargamos de gestionar los procedimientos legales, técnicos y gerenciales necesarios para que recuperes parcial o totalmente tu inversión.',
-      icon: <GesterLogo size={50} />
+      icon: gif2
     },
     {
       sizeIcon: '80px',
       title: 'Gestar soluciones estratégicas',
       description: 'Asumimos tus desafíos como propios y nos involucramos en equipo con seriedad y profesionalismo.',
-      icon: <GesterLogo size={50} />
+      icon: gif3
     },
     {
       sizeIcon: '80px',
       title: 'Acercarte a tu inmueble',
       description: 'Realizamos Salvatajes y Desarrollos Inmobiliarios, ofreciendo opciones viables para que accedas a tu inmueble lo más pronto posible.',
-      icon: <GesterLogo size={50} />
+      icon:gif4
     },
   ]
 

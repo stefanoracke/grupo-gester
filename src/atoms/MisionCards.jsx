@@ -68,7 +68,7 @@ export default function MisionCards(
             <div className="flex py-[100px] px-[60px] flex-col">
                 <div className="flex items-center fadeIn delay-1">
                     <span className='bg-card w-[60px] h-[60px] rounded-full p-4 flex justify-center items-center' style={{background:`${textColor && 'linear-gradient(75deg,#030E28, #0F206C)'}`}}>
-                        {icon}
+                        <img src={icon} alt="" />
                     </span>
                     <h2 className="text-3xl pl-6">{title}</h2>
                 </div>

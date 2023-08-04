@@ -1,13 +1,16 @@
 import React from 'react'
 import NosotrosCards from '../atoms/NosotrosCards'
-
+import alexis from '/src/assets/us/alexis.jpeg'
+import sabrina from '/src/assets/us/sabrina.png'
+import karina from '/src/assets/us/karina.jpeg'
+import cintya from '/src/assets/us/cintya.png'
 export default function Nosotros() {
     const cards = [
         {
             name: 'Alexis Maffini',
             cargo: 'Dirección Ejecutiva',
             titulo: 'Contador público - UNC',
-            img: '/src/assets/us/alexis.jpeg',
+            img: alexis,
             others: [
                 'Internacional en gestión de proyectos de la construcción.',
                 'Universidad de Barcelona. Magister en Dirección de Negocios - MBA - UCC'
@@ -17,7 +20,7 @@ export default function Nosotros() {
             name: 'Sabrina Zaboyñik',
             cargo: 'Arquitectura e Higiene y Seguridad',
             titulo: 'Lic. en Higiene y Seguridad',
-            img: '/src/assets/us/sabrina.png',
+            img: sabrina,
             others: [
                 'Jefe Mayor de obras'
             ]
@@ -26,7 +29,7 @@ export default function Nosotros() {
             name: 'Karina Borghello',
             cargo: 'Gerente Técnica',
             titulo: 'Arquitecta',
-            img: '/src/assets/us/karina.jpeg',
+            img: karina,
             others: [ 
                 ' Directora Técnica'
             ]
@@ -35,7 +38,7 @@ export default function Nosotros() {
             name: 'Cynthia Benavidez',
             cargo: 'Administración',
             titulo: 'Administrativa',
-            img: '/src/assets/us/cintya.png',
+            img: cintya,
             others: [
                'Encargada de compras y logística'
             ]

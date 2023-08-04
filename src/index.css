@@ -31,6 +31,9 @@ section {
 .bg-texture-lb {
   background: url(/src/assets/texture.png), linear-gradient(90deg, rgb(24, 107, 153) 0%, rgb(34, 165, 171) 100%);
 }
+.bg-lb{
+  background:  linear-gradient(90deg, rgb(24, 107, 153) 0%, rgb(34, 165, 171) 100%);
+}
 
 .bg-services {
   background: url(/src/assets/texture.png), linear-gradient(63deg, #2985B8 0%, #1D3DCA 100%);
@@ -70,6 +73,11 @@ section {
 .triangle {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotate(180deg);
+}
+.triangle-rectangle {
+  clip-path: polygon(0 0, 0% 100%, 100% 100%) !important;
+  transform: rotate(0deg);
+  background-color: #030E28;
 }
 
 

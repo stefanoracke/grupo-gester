@@ -30,7 +30,7 @@ export default function MisionCards(
   return (
     <article
     onClick={()=>{handleClick(index)}}
-    className={`h-[550px] bg-white text-black relative cursor-pointer`}
+    className={`h-[550px] bg-white text-black relative hover:cursor-pointer`}
     style={{
         width:`${isOpen ? '500px' : '70px'}`,
         transition:'1s ease-out all ', 

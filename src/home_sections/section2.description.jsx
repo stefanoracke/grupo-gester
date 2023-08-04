@@ -28,10 +28,10 @@ export default function DescriptionSection() {
   ]
   return (
     <div className="w-full h-full flex justify-center items-center py-[30px] sm:py-[150px] overflow-x-auto">
-      <article className='grid-cols-3 grid gap-8 min-w-[1100px]'>
+      <article className='grid-cols-3 grid gap-8'>
         {
           cards.map((card, index) => (
-            <div className='span-col-1 max-w-[320px] text-white'
+            <div className='col-span-3 md:col-span-1 max-w-[320px] text-white'
             key={`description-${index}`}>
 
               <MainCards

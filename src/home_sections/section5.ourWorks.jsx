@@ -1,6 +1,7 @@
 import React from 'react'
 import ButtonGrey from '../atoms/ButtonGrey'
 import ArrowIcon from '../atoms/Icons/Arrow'
+import SliderAtom from '../atoms/slider/SliderAtom'
 
 export default function OurWorksSection() {
   const handleClick = () => {
@@ -13,14 +14,10 @@ export default function OurWorksSection() {
       <p className="max-w-[700px] text-center leading-[28px] text-[20px] pt-4">
       Realizamos más de 200 gestiones, entre 2021 y 2023, poniendo en primer lugar las inversiones de familias y empresas.
       </p>
-      <div className='pt-[30px]'>
-
-        <ButtonGrey
-        icon={ArrowIcon}
-        text={'Ver video'}
-        handleClick={handleClick}
-        />
+      <div className="flex justify-center items-center py-2">
+        <SliderAtom/>
       </div>
+      
     </div>
   )
 }

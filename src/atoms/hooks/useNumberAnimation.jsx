@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from 'react';
-
-const useNumberAnimation = (targetValue, step, intervalDuration = 50) => {
+const useNumberAnimation = (shouldStart, targetValue, step, intervalDuration = 50) => {
   const [currentValue, setCurrentValue] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentValue < targetValue) {
-        setCurrentValue((prevValue) => Math.min(prevValue + step, targetValue));
-      } else {
-        clearInterval(interval); // Detener el intervalo cuando alcanza el valor objetivo
-      }
-    }, intervalDuration);
+    let interval;
+
+    if (shouldStart) {
+      interval = setInterval(() => {
+        if (currentValue < targetValue) {
+          setCurrentValue((prevValue) => Math.min(prevValue + step, targetValue));
+        } else {
+          clearInterval(interval);
+        }
+      }, intervalDuration);
+    }
 
     return () => {
-      clearInterval(interval); // Limpieza del intervalo al desmontar el componente
+      clearInterval(interval);
     };
-  }, [currentValue, targetValue, step, intervalDuration]);
+  }, [currentValue, targetValue, step, intervalDuration, shouldStart]);
 
   return currentValue;
 };
-
 export default useNumberAnimation;

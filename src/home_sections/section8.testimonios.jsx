@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import TestimoniosCards from '../atoms/TestimoniosCards'
-
 import img1 from './../assets/us/alexis.jpeg'
 
 export default function TestimoniosSection() {
+
+  const [isMobile, setIsMobile] = useState(false)
 
   const testimonios = [
     {
@@ -27,8 +30,23 @@ export default function TestimoniosSection() {
     }
   ]
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Initial check
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col justify-center items-center pb-[200px]">
+    <div className="flex flex-col justify-center items-center pb-10 sm:pb-[200px]">
       <h3 className="text-4xl text-secondary">
         Testimonios
       </h3>
@@ -36,7 +54,40 @@ export default function TestimoniosSection() {
         Trabajamos desde la
         <strong> transparencia</strong> y el <strong> profesionalismo</strong>, logrando resultados que respaldan nuestra trayectoria. Conocé el testimonio en primer persona de los clientes que nos eligieron.
       </p>
+    {
+      isMobile ?
+      <div className='pt-7'>
+        <Splide
+        options={{
+            rewind: true,
+            gap: '3rem',
+            perPage: 1,
+            focus: 0,
+            omitEnd: true,
+            autoplay: true,
+            pauseOnHover: false,
+            pauseOnFocus: true,
+            type: 'loop',
+        }}
+        aria-label="My Favorite Images"
+        className="splide-fade-transition"
+    >
+        {
+            testimonios.map((testimonio, index) => (
 
+                <SplideSlide key={'testi' + index}>
+                    <div className="flex justify-center">
+
+                    <TestimoniosCards testimonio={testimonio}/>
+                    </div>
+                </SplideSlide>
+            ))
+        }
+
+
+    </Splide>
+      </div>
+      :
       <div className="grid grid-cols-3 justify-center gap-3 pt-7">
         {
           testimonios.map((testimonio, index)=>(
@@ -46,6 +97,7 @@ export default function TestimoniosSection() {
           ))
         }
       </div>
+    }
 
     </div>
   )

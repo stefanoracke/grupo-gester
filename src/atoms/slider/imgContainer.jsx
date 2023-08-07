@@ -1,12 +1,12 @@
 import React from 'react'
 import ButtonGrey from '../ButtonGrey'
-import ArrowIcon from '../Icons/Arrow'
+import ArrowIcon from '/src/assets/icons/icon-flecha.svg'
 import Triangle from '../Icons/Triangle'
 
 export default function ImgContainer({ active, slide }) {
     return (
-        <div className='w-[33%]'>
-            <div  className="relative w-full"  style={{ height: `${active ? 'auto' : '55%'}` }}> 
+        <div className='w-full'>
+            <div  className="relative w-full transition-all duration-500"  style={{ transform: `${active ? 'scale(1)' : 'scale(.8) translateY(-57px)'}` }}> 
 
                 <img  
                 style={{ height: `${active ? 'auto' : '100%'}` }}
@@ -19,7 +19,7 @@ export default function ImgContainer({ active, slide }) {
             </div>
             {
                 active &&
-                <div className='pt-6'>
+                <div className='pt-6 fadeIn'>
                     <h3 className='text-center pt-5'>{slide.name}</h3>
                     <p className="font-lighter text-center">{slide.text}</p>
                     <div className="pt-4 flex justify-center">

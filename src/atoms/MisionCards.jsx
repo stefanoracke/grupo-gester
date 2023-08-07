@@ -55,7 +55,7 @@ export default function MisionCards(
              }}>
                 <div className="bg-texture-lb w-[25px] h-[25px] flex justify-center items-center  rounded-full text-white font-bolder">
 
-                    <span className='transform -translate-y-[0.5px]'>
+                    <span className='transform text-[18px] -translate-y-[0.6px]'>
                         +
                     </span>
                 </div>

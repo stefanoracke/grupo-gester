@@ -46,7 +46,7 @@ export default function Nosotros() {
 
     ]
     return (
-        <div className="flex flex-col justify-center items-center py-[200px]">
+        <div className="flex flex-col justify-center items-center py-10 sm:py-[200px]">
             <h3 className="text-4xl text-secondary">
                 Nuestro Equipo
             </h3>

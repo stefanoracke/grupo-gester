@@ -28,7 +28,7 @@ export default function DescriptionSection() {
     },
   ]
   return (
-    <div className="w-full h-full flex justify-center items-center py-[30px]  sm:py-[150px] overflow-x-auto">
+    <div className="w-full h-full flex justify-center items-center relative z-20 transform translate-y-[-50px]  sm:translate-y-[-120px] overflow-x-auto">
       <article className='grid-cols-3 grid rounded-[10px] px-[40px] bg-white'>
         {
           cards.map((card, index) => (

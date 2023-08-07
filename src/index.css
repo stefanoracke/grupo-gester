@@ -2,11 +2,14 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import '@splidejs/react-splide/css';
 
 * {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  
 }
 
 
@@ -85,7 +88,11 @@ section {
   width: 1015px;
   height: 1015px;
   border-radius: 1015px;
-  opacity: 0.6;
+  opacity: 0.5;
   background: #186B99;
   filter: blur(260px);
+}
+
+button:disabled{
+  opacity: .4;
 }

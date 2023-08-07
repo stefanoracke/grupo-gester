@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 import Navbar from '../atoms/Navbar'
 import HeroSection from '../home_sections/section1.hero'
@@ -13,9 +13,42 @@ import Footer from '../atoms/Footer'
 import Nosotros from '../home_sections/section7.nosotros'
 
 export default function LandingHome() {
+
+    const [navActive, setNavActive] = useState()
+    const sections = [
+    
+        'misionS3',
+        'servicesS4',
+        'nosotrosS7',
+        'ourWorksS8',
+        'testimoniosS8',
+        'contactS9'
+      ];
+    
+      const handleScroll = () => {
+        sections.forEach(sectionId => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top <= window.innerHeight) {
+              setNavActive(sectionId)
+              // You can perform actions for each section in view here
+            }
+          }
+        });
+      };
+    
+      useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
+
     return (
         <>
-            <Navbar/>
+            <Navbar navActive={navActive}/>
             <section id='heroS1'>
                 <HeroSection/>
             </section>
@@ -37,10 +70,10 @@ export default function LandingHome() {
             <section id='nosotrosS7'> 
                 <Nosotros/>
             </section>
-            <section id='ourWorksS8'> 
+            <section id='testimoniosS8'> 
                 <TestimoniosSection/>
             </section>
-            <section id='ourWorksS9'> 
+            <section id='contactS9'> 
                 <ContactSection/>
             </section>
             <Footer/>

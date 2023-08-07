@@ -1,8 +1,8 @@
 import React from 'react'
 import useNumberAnimation from './hooks/useNumberAnimation';
 
-export default function BoxWhite({icon, text, number,step}) {
-    const currentValue = useNumberAnimation(number,step);
+export default function BoxWhite({icon, text, number,step, start}) {
+    const currentValue = useNumberAnimation(start,number,step);
     return (
         <div className='py-[20px] flex px-[30px] border border-white rounded-[10px] w-full sm:w-[400px] '>
             <div className="flex gap-4">

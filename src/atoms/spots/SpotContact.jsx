@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function SpotContact(props) {
-    console.log(props)
     return (
         <svg {...props} width="1028" height="2056" viewBox="0 0 1028 2056" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.6" filter="url(#filter0_f_593_1483)">

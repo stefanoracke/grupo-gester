@@ -34,10 +34,16 @@ export default function SliderAtom() {
     const [activeIndex, setActiveIndex] = useState(); // Keep track of active slide index
     const splideRef = useRef(null);
 
-    const handleSlideChange = (splide) => {
-        const activeIndex = splide.index;
-        setActiveIndex(activeIndex);
+    const handleSlideChange = (splide, index, prevIndex) => {
+        setActiveIndex(index);
     };
+
+    const handleSlideClick = () => {
+        // Advance to the next slide when a SplideSlide is clicked
+        const nextIndex = (activeIndex + 1) % slides.length;
+        setActiveIndex(nextIndex);
+        splideRef.current.go(nextIndex);
+      };
 
     return (
         <div className='w-full relative cursor-grab'>
@@ -47,31 +53,32 @@ export default function SliderAtom() {
                     gap: '3rem',
                     perPage: 3,
                     focus: 1,
-                    omitEnd: true,
+                    perMove:1,
                     autoplay: true,
                     pauseOnHover: false,
                     pauseOnFocus: true,
                     type: 'loop',
-                    
+                    arrows:false
                     
                 }}
                 aria-label="My Favorite Images"
                 ref={splideRef}
-                onMoved={handleSlideChange}
+                onMove={handleSlideChange}
                 className="splide-fade-transition"
             >
-                {
+                 {
                     slides.map((slide, index) => (
 
-                        <SplideSlide key={'slide' + index}>
-                            <div className="flex justify-center">
+                        <SplideSlide onClick={()=>{handleSlideClick}} key={'slide' + index}>
+                            <div  className="flex cursor-grab justify-center">
 
                                 <ImgContainer active={index === activeIndex} slide={slide} />
                             </div>
                         </SplideSlide>
                     ))
-                }
-
+                } 
+           
+                        
 
             </Splide>
 

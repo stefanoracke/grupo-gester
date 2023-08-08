@@ -1,0 +1,12 @@
+.animationTransformY{
+    animation: translateY .8s forwards ease-in-out;
+    transform: translateY(100%);
+}
+@keyframes translateY {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

@@ -10,7 +10,7 @@ export default function ImgContainer({ active, slide }) {
 
                 <img  
                 style={{ height: `${active ? 'auto' : '100%'}` }}
-                className={`w-full object-cover object-bottom hover:cursor-pointer`} 
+                className={`w-full object-cover object-bottom hover:cursor-grab active:cursor-grabbing`} 
                 src={slide.image} 
                 alt="" />
                 <div className="bg-primary flex h-[25px] left-[-1px] bottom-[-1px] w-[48%] absolute">

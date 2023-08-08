@@ -3,7 +3,7 @@ import React from 'react'
 import Triangle from './Icons/Triangle'
 
 export default function TestimoniosCards({ testimonio }) {
-    console.log(testimonio)
+
     return (
         <article className='rounded-[5px] bg-primary relative w-[340px] overflow-hidden flex flex-col'>
             <div className="absolute top-0 right-0 select-none z-10 pointer-events-none">
@@ -33,7 +33,7 @@ export default function TestimoniosCards({ testimonio }) {
 
                                 <Triangle size={'15px'} className={'absolute top-[-22px] bg-secondary w-[19px] h-[15px] left-[15px]'}/>
                            
-                            <img className='w-[50px] h-[50px] bg-secondary' src={testimonio.img} alt="" />
+                            <img className='w-[50px] h-[50px] bg-secondary object-cover' src={testimonio.img} alt="" />
                         </div>
                         <div>
                             <p className="font-bold">{testimonio.name}</p>

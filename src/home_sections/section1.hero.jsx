@@ -8,8 +8,13 @@ export default function HeroSection() {
       <div className="w-full  sm:w-50 h-[calc(100vh-106px)] items-center flex-start flex  mt-[106px] z-30">
         <div className="flex flex-col px-[20px] sm:px-[10rem]">
 
-          <h2 className='text-5xl font-semibold'>Grupo Gester</h2>
-          <h3 className='text-xl font-light'>Gestamos soluciones integrales <br/> frente a problemas inmobiliarios complejos.</h3>
+          <h2 className='text-5xl font-semibold' 
+           data-aos="zoom-in"
+           data-aos-duration="2500">Grupo Gester</h2>
+          <h3 className='text-xl font-light'
+           data-aos="zoom-in"
+           data-aos-duration="1500"
+           data-aos-delay="1200">Gestamos soluciones integrales <br/> frente a problemas inmobiliarios complejos.</h3>
         </div>
       </div>
       <video 

@@ -60,9 +60,10 @@ export default function Nosotros() {
 
                 {
                     cards.map((card, index)=>(
-                        <div className="col-span-4 sm:col-span-2 lg:col-span-1" key={index+'nosotros'}>
+                        <div className="col-span-4 sm:col-span-2 xl:col-span-1" key={index+'nosotros'}>
                             <NosotrosCards
                             persona={card}
+                            delay={index * 400}
                             />
                         </div>
                     ))

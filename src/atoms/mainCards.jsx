@@ -12,7 +12,8 @@ export default function MainCards(
   ) {
   return (
     <article 
-    
+    data-aos="zoom-in"
+    data-aos-duration="2500"
     className={`w-full h-full ${cardSize == 'big' && 'pt-[60px]'} bg-card flex  flex-col items-center py-[30px] px-[15px]  rounded-[10px] `}
     >
         <div 

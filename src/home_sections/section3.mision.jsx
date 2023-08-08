@@ -58,7 +58,7 @@ export default function MisionSection() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 850);
     };
 
     // Initial check
@@ -79,8 +79,9 @@ export default function MisionSection() {
           <h2 className="text-3xl text-secondary">
             Nuestra misión
           </h2>
-          <div className="hidden sm:flex w-fit pt-[60px] gap-8">
+          <div className="flex w-fit pt-[60px] gap-8">
             {
+              !isMobile &&
               cards.map((card, index) => (
                 <MisionCards
                   key={`mision-${index}`}
@@ -97,8 +98,9 @@ export default function MisionSection() {
               ))
             }
           </div>
-          <div className="flex-col flex gap-4 sm:hidden">
+          <div className="flex-col flex gap-4 px-4">
             {
+              isMobile &&
               cards.map((card,index)=>(
                 <MisionCardsMobile
                 key={index}

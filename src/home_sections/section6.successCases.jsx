@@ -15,6 +15,8 @@ export default function SuccessCasesSection() {
     if (entry.isIntersecting) {
       console.log('The target div is in view');
       // You can perform actions when the div is in view
+      setStart(true)
+
     }
   };
 
@@ -29,7 +31,6 @@ export default function SuccessCasesSection() {
 
     if (divRef.current) {
       observer.observe(divRef.current);
-      setStart(true)
 
     }
 
@@ -43,20 +44,20 @@ export default function SuccessCasesSection() {
   const cards = [
     {
       icon: <LlavesIcon />,
-      number: 20,
-      step:1,
+      number: 250,
+      step:10,
       text: 'Unidades habitacionales salvadas'
     },
     {
       icon: <PeopleIcon />,
-      number: 20,
-      step:1,
+      number: 500,
+      step:25,
       text: 'Personas asistida por nuestro equipo'
     },
     {
       icon: <LlavesIcon />,
-      number: 200,
-      step:10,
+      number: 20,
+      step:1,
       text: 'Millones de dólares recuperados'
     },
   ]

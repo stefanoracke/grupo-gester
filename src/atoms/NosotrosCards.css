@@ -12,3 +12,16 @@
 .second-card{
     transition: .8s ease-in-out transform;
 }
+.img-nosotros{
+    transform-origin: center center; /* Set the scaling origin */
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.8s ease-in-out; /* Apply a smooth transition */
+  }
+
+.nosotros-card:hover .img-nosotros{
+    transform: scale(1.1);
+}
+
+.second-card:hover , .img-nosotros{
+    transform: scale(1.1);
+}

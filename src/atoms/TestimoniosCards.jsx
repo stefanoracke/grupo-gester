@@ -19,7 +19,9 @@ export default function TestimoniosCards({ testimonio }) {
             </div>
             <div className='bg-secondary relative w-full p-[20px] h-[300px] overflow-hidden'>
                 <div className='h-[260px] overflow-y-scroll test-text '>
-                    <p className='font-light bg-transparent  z-20'>
+                    <p className='font-light bg-transparent  z-20'
+                    data-aos="fade-up"
+                    data-aos-duration="1500">
                         {testimonio.text}
                     </p>
                 </div>

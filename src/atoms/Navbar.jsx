@@ -28,6 +28,7 @@ export default function Navbar({ navActive }) {
                             onClick={handleClick}
                             className='transition-all text-[8vw] ease-in-out duration-400'
                             href="#misionS3"
+                             style={navActive == 'misionS3' ? styleActive : {}}
                         >
                             <TextEffect text={'Nuestra Misión'} active={active} />
                            
@@ -38,6 +39,7 @@ export default function Navbar({ navActive }) {
                             onClick={handleClick}
                             className='transition-all text-[8vw] ease-in-out duration-400'
                             href="#servicesS4"
+                             style={navActive == 'servicesS4' ? styleActive : {}}
                         >
                              <TextEffect text={'Servicios'} delay='.8s' active={active} />
                         </a>
@@ -58,6 +60,7 @@ export default function Navbar({ navActive }) {
                             onClick={handleClick}
                             className='transition-all text-[8vw] ease-in-out duration-400'
                             href="#testimoniosS8"
+                             style={navActive == 'testimoniosS8' ? styleActive : {}}
                         >
                             <TextEffect text={'Testimonios'} delay='1.2s' active={active} />
                         </a>
@@ -66,6 +69,7 @@ export default function Navbar({ navActive }) {
                         <a
                             onClick={handleClick}
                             className='transition-all text-[8vw] ease-in-out duration-400' href="#contactS9"
+                             style={navActive == 'contactS9' ? styleActive : {}}
                         >
                             <TextEffect text={'Contacto'} delay='1.4s' active={active} />
                         </a>

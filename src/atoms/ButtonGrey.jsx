@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function ButtonGrey({handleClick, text, icon ,type="button", disabled=false}) {
+export default function ButtonGrey({onClick, text, icon ,type="button", disabled=false}) {
   return (
     <button 
     disabled={disabled}
     className='bg-button-grey  py-[18px] px-[40px] rounded-full flex justify-center items-center' 
-    onClick={()=>{handleClick}}
+    onClick={onClick}
     type={type}>
         <span>
             {text}

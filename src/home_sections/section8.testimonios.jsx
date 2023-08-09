@@ -7,6 +7,7 @@ import img1 from '/src/assets/luciano.png'
 import img2 from '/src/assets/virginia.png'
 import img3 from '/src/assets/federico.png'
 
+
 export default function TestimoniosSection() {
 
   const [isMobile, setIsMobile] = useState(false)
@@ -59,9 +60,38 @@ export default function TestimoniosSection() {
     {
       isMobile ?
       <div className='pt-7'>
-       
+        <Splide
+        options={{
+            gap: '3rem',
+            perPage: 1,
+            focus: 0,
+            arrows:false,
+            
+            autoplay: true,
+            pauseOnHover: false,
+            pauseOnFocus: true,
+            type: 'loop',
+        }}
+        aria-label="Others"
+    >
+        {
+            testimonios.map((testimonio, index) => (
+
+                <SplideSlide key={'testi' + index}>
+                    <div className="flex justify-center">
+
+                    <TestimoniosCards testimonio={testimonio}/>
+                    </div>
+                </SplideSlide>
+            ))
+        }
+
+
+    </Splide>
+
       </div>
       :
+      
       <div className="grid grid-cols-3 justify-center gap-3 pt-7">
         {
           testimonios.map((testimonio, index)=>(

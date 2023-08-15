@@ -2,26 +2,49 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className='flex bg-primary relative z-10 w-full justify-center pt-[110px] pb-[40px] border-2 border-t-secondary border-primary'>
+    <footer className='flex  bg-primary relative z-10 w-full justify-center pt-[110px] pb-[40px] border-2 border-t-secondary border-primary'>
       <svg className='absolute right-0 top-0' xmlns="http://www.w3.org/2000/svg" width="909" height="584" viewBox="0 0 909 584" fill="none">
-  <path opacity="0.2" d="M1185.89 65.1315C1195.77 -23.8444 1196.91 -123.8 1185.51 -236.629L170.008 -236.629C86.0161 607.696 677.758 757.251 677.758 757.251C677.758 757.251 990.161 678.498 1128.88 311.235L988.64 312.371C888.307 566.426 677.758 598.987 677.758 598.987C677.758 598.987 283.263 519.477 309.107 -86.6955L1046.41 -86.6955C1049.45 -20.0582 1046.03 34.0846 1043.75 65.5102L472.529 65.5102C460.368 395.289 677.758 456.247 677.758 456.247C677.758 456.247 772.771 427.472 831.299 313.507L677.378 314.643V170.388L1317.39 170.388C1174.49 787.919 677.378 914 677.378 914C678.138 913.243 -99.8295 716.36 10.7658 -393L1345.13 -393C1362.61 -218.834 1358.05 -66.6286 1338.29 65.1315H1185.89Z" fill="url(#paint0_linear_570_3523)"/>
-  <defs>
-    <linearGradient id="paint0_linear_570_3523" x1="678" y1="-393" x2="678" y2="914" gradientUnits="userSpaceOnUse">
-      <stop stop-color="white" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="white" stop-opacity="0.2"/>
-    </linearGradient>
-  </defs>
-</svg>
-      <div className="max-w-[1100px] flex flex-col justify-center items-center">
+        <path opacity="0.2" d="M1185.89 65.1315C1195.77 -23.8444 1196.91 -123.8 1185.51 -236.629L170.008 -236.629C86.0161 607.696 677.758 757.251 677.758 757.251C677.758 757.251 990.161 678.498 1128.88 311.235L988.64 312.371C888.307 566.426 677.758 598.987 677.758 598.987C677.758 598.987 283.263 519.477 309.107 -86.6955L1046.41 -86.6955C1049.45 -20.0582 1046.03 34.0846 1043.75 65.5102L472.529 65.5102C460.368 395.289 677.758 456.247 677.758 456.247C677.758 456.247 772.771 427.472 831.299 313.507L677.378 314.643V170.388L1317.39 170.388C1174.49 787.919 677.378 914 677.378 914C678.138 913.243 -99.8295 716.36 10.7658 -393L1345.13 -393C1362.61 -218.834 1358.05 -66.6286 1338.29 65.1315H1185.89Z" fill="url(#paint0_linear_570_3523)" />
+        <defs>
+          <linearGradient id="paint0_linear_570_3523" x1="678" y1="-393" x2="678" y2="914" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white" stop-opacity="0.4" />
+            <stop offset="1" stop-color="white" stop-opacity="0.2" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div className="max-w-[1100px] px-[20px] flex flex-col justify-center items-center">
         <p className="font-light text-center">Somos <strong>Gester</strong>, somos un Grupo humano, profesional y sobre todo <strong>proactivo</strong>.</p>
         <h3 className="text-center tracking-wide pt-2">
           Transformamos las adversidades, en fuerza motora de superación.
           Somos resilientes, porque elegimos a diario ser creadores de nuestro propio destino. Asumimos el desafío de un mundo más justo.
         </h3>
         <p className="text-[15px] tracking-wide pt-[50px] max-w-[600px] text-center font-light">
-        Gestión de Salvatajes en Desarrollos Inmobiliarios, Divisiones Societarias y Desarrollos Financieros e Inmobiliarios.
+          Gestión de Salvatajes en Desarrollos Inmobiliarios, Divisiones Societarias y Desarrollos Financieros e Inmobiliarios.
         </p>
-        <hr className="text-secondary w-[70%] mt-[40px]" />
+        <div className="flex gap-4 pt-6 justify-center">
+          <a href='https://www.linkedin.com/in/alexismaffini/' target='_blank' className='linkedin z-30 rounded-full p-2 bg-secondary flex justify-center items-center'>
+            <svg width="25" height="25" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.4789 3.54932C23.1064 3.54932 23.7083 3.79861 24.152 4.24236C24.5958 4.68611 24.8451 5.28796 24.8451 5.91551V22.4789C24.8451 23.1064 24.5958 23.7083 24.152 24.152C23.7083 24.5958 23.1064 24.8451 22.4789 24.8451H5.91551C5.28796 24.8451 4.68611 24.5958 4.24236 24.152C3.79861 23.7083 3.54932 23.1064 3.54932 22.4789V5.91551C3.54932 5.28796 3.79861 4.68611 4.24236 4.24236C4.68611 3.79861 5.28796 3.54932 5.91551 3.54932H22.4789ZM21.8873 21.8873V15.6169C21.8873 14.594 21.481 13.613 20.7577 12.8897C20.0344 12.1664 19.0534 11.76 18.0304 11.76C17.0248 11.76 15.8535 12.3752 15.2857 13.298V11.9848H11.9848V21.8873H15.2857V16.0547C15.2857 15.1437 16.0192 14.3983 16.9302 14.3983C17.3694 14.3983 17.7907 14.5728 18.1014 14.8835C18.412 15.1941 18.5865 15.6154 18.5865 16.0547V21.8873H21.8873ZM8.13974 10.1273C8.66688 10.1273 9.17244 9.91794 9.54519 9.54519C9.91794 9.17244 10.1273 8.66688 10.1273 8.13974C10.1273 7.03946 9.24002 6.1403 8.13974 6.1403C7.60946 6.1403 7.10089 6.35096 6.72592 6.72592C6.35096 7.10089 6.1403 7.60946 6.1403 8.13974C6.1403 9.24002 7.03946 10.1273 8.13974 10.1273ZM9.78425 21.8873V11.9848H6.50706V21.8873H9.78425Z" fill="white" />
+            </svg>
+
+          </a>
+          <a href='' className='rounded-full p-2 bg-secondary flex justify-center items-center '>
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_651_1469)">
+                <path d="M12.0012 0C18.6288 0 24.0012 5.3724 24.0012 12C24.0012 18.6276 18.6288 24 12.0012 24C9.88057 24.0034 7.79722 23.4422 5.96524 22.374L0.00603758 24L1.62844 18.0384C0.559349 16.2058 -0.00230535 14.1216 0.00123736 12C0.00123736 5.3724 5.37364 0 12.0012 0ZM7.91164 6.36L7.67164 6.3696C7.51626 6.37906 7.36441 6.41988 7.22524 6.4896C7.09506 6.56331 6.97623 6.65547 6.87244 6.7632C6.72844 6.8988 6.64684 7.0164 6.55924 7.1304C6.11538 7.70748 5.8764 8.41598 5.88004 9.144C5.88244 9.732 6.03604 10.3044 6.27604 10.8396C6.76684 11.922 7.57444 13.068 8.64004 14.13C8.89684 14.3856 9.14884 14.6424 9.42004 14.8812C10.7441 16.047 12.3219 16.8876 14.028 17.3364L14.7096 17.4408C14.9316 17.4528 15.1536 17.436 15.3768 17.4252C15.7263 17.4072 16.0676 17.3125 16.3764 17.148C16.5336 17.0671 16.6869 16.979 16.836 16.884C16.836 16.884 16.8876 16.8504 16.986 16.776C17.148 16.656 17.2476 16.5708 17.382 16.4304C17.4816 16.3272 17.568 16.206 17.634 16.068C17.7276 15.8724 17.8212 15.4992 17.8596 15.1884C17.8884 14.9508 17.88 14.8212 17.8764 14.7408C17.8716 14.6124 17.7648 14.4792 17.6484 14.4228L16.95 14.1096C16.95 14.1096 15.906 13.6548 15.2676 13.3644C15.2008 13.3352 15.1293 13.3186 15.0564 13.3152C14.9743 13.3068 14.8914 13.316 14.8131 13.3423C14.7349 13.3686 14.6632 13.4113 14.6028 13.4676C14.5968 13.4652 14.5164 13.5336 13.6488 14.5848C13.599 14.6517 13.5304 14.7023 13.4518 14.7301C13.3732 14.7578 13.288 14.7616 13.2072 14.7408C13.1291 14.7198 13.0525 14.6934 12.978 14.6616C12.8292 14.5992 12.7776 14.5752 12.6756 14.532C11.9869 14.2315 11.3493 13.8254 10.7856 13.3284C10.6344 13.1964 10.494 13.0524 10.35 12.9132C9.87794 12.4611 9.46651 11.9496 9.12604 11.3916L9.05524 11.2776C9.00438 11.201 8.96327 11.1184 8.93284 11.0316C8.88724 10.8552 9.00604 10.7136 9.00604 10.7136C9.00604 10.7136 9.29764 10.3944 9.43324 10.2216C9.56524 10.0536 9.67684 9.8904 9.74884 9.774C9.89044 9.546 9.93484 9.312 9.86044 9.1308C9.52444 8.31 9.17644 7.4928 8.81884 6.6816C8.74804 6.5208 8.53804 6.4056 8.34724 6.3828C8.28244 6.3756 8.21764 6.3684 8.15284 6.3636C7.99168 6.35559 7.8302 6.3572 7.66924 6.3684L7.91044 6.3588L7.91164 6.36Z" fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_651_1469">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+
+
+          </a>
+        </div>
+        <hr className="text-secondary w-full md:w-[70%] mt-[40px]" />
         <small className='text-center text-xs py-5'>2023 Grupo Gester by <a target='_blank' href="https://chimpance.digital/">Chimpancé Digital</a> • Todos los derechos reservados</small>
       </div>
     </footer>

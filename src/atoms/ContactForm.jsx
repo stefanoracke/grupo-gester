@@ -9,19 +9,19 @@ import emailForm from '/src/assets/icons/contactForm/icon-mail-form.svg'
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
-        nombre: '',
-        asunto: '',
-        telefono: '',
+        name: '',
+        subject: '',
+        phone: '',
         email: '',
-        mensaje: '',
+        message: '',
       });
       const [isFormValid, setIsFormValid] = useState(false);
        const [errors, setErrors] = useState({
-        nombre: '',
-        asunto: '',
-        telefono: '',
+        name: '',
+        subject: '',
+        phone: '',
         email: '',
-        mensaje: '',
+        message: '',
       });
     
       const handleInputChange = (event) => {
@@ -90,29 +90,29 @@ export default function ContactForm() {
     <form action="" className="flex w-full flex-wrap gap-8" onSubmit={handleSubmit}>
 
     <div className="w-full sm:w-[46%]">
-      <Input type='text' name="nombre" placeHolder="Nombre" icon={person} onChange={handleInputChange} 
+      <Input type='text' name="name" placeHolder="Nombre" icon={person} onChange={handleInputChange} 
       onBlur={handleInputBlur}/>
-      {errors.nombre && <p className="text-white px-4 pt-1">{errors.nombre}</p>}
+      {errors.name && <p className="text-white text-[14px] px-4 pt-1">{errors.name}</p>}
     </div>
     <div className="w-full sm:w-[46%]">
-      <Input type='text' name="asunto" placeHolder="Asunto" icon={asunto} onChange={handleInputChange} 
+      <Input type='text' name="subject" placeHolder="Asunto" icon={asunto} onChange={handleInputChange} 
       onBlur={handleInputBlur}/>
-      {errors.asunto && <p className="text-white px-4 pt-1">{errors.asunto}</p>}
+      {errors.subject && <p className="text-white text-[14px] px-4 pt-1">{errors.subject}</p>}
     </div>
     <div className="w-full sm:w-[46%]">
-      <Input type='number' name="telefono" placeHolder="Télefono" icon={phoneForm} onChange={handleInputChange} 
+      <Input type='number' name="phone" placeHolder="Télefono" icon={phoneForm} onChange={handleInputChange} 
       onBlur={handleInputBlur}/>
-      {errors.telefono && <p className="text-white px-4 pt-1">{errors.telefono}</p>}
+      {errors.phone && <p className="text-white text-[14px] px-4 pt-1">{errors.phone}</p>}
     </div>
     <div className="w-full sm:w-[46%]">
       <Input type='email' name="email" placeHolder="Email" icon={emailForm} onChange={handleInputChange} 
       onBlur={handleInputBlur}/>
-      {errors.email && <p className="text-white px-4 pt-1">{errors.email}</p>}
+      {errors.email && <p className="text-white text-[14px] px-4 pt-1">{errors.email}</p>}
     </div>
     <div className="w-full">
-      <Textarea placeHolder="Mensaje... " name="mensaje" id="" cols="20" rows="10" onChange={handleInputChange} 
+      <Textarea placeHolder="Mensaje... " name="message" id="" cols="20" rows="10" onChange={handleInputChange} 
       onBlur={handleInputBlur}/>
-      {errors.mensaje && <p className="text-white px-4 pt-1">{errors.mensaje}</p>}
+      {errors.message && <p className="text-white text-[14px] px-4 pt-1">{errors.message}</p>}
     </div>
     <div>
       <ButtonGrey text={'Enviar mensaje'} disabled = {!isFormValid} type="submit"/>

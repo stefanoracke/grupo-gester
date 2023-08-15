@@ -43,7 +43,7 @@ export default function ServicesSection() {
           cards.map((card,index)=>(
             <div 
             key={'card-services-' + index}
-            className="col-span-2 sm:col-span-1 h-[350px]">
+            className="col-span-2 sm:col-span-1 h-[350px] sm:h-full lg:h-[350px]">
                 <MainCards
                 cardSize={'big'}
                 description={card.description}

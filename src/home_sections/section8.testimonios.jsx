@@ -49,13 +49,13 @@ export default function TestimoniosSection() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center pb-10 sm:pb-[200px]">
+    <div className="flex pt-[70px] lg:pt-0 flex-col justify-center items-center pb-10 sm:pb-[200px]">
       <h3 className="text-4xl text-secondary">
         Testimonios
       </h3>
-      <p className='pt-2 max-w-[700px] text-center text-[20px]'>
+      <p className='pt-2 max-w-[700px] px-[20px] text-center text-[20px]'>
         Trabajamos desde la
-        <strong> transparencia</strong> y el <strong> profesionalismo</strong>, logrando resultados que respaldan nuestra trayectoria. Conocé el testimonio en primer persona de los clientes que nos eligieron.
+        <strong> transparencia</strong> y el <strong> profesionalismo</strong>, logrando resultados que respaldan nuestra trayectoria. Conocé el testimonio en primer persona de los clientes que nos eligieron
       </p>
     {
       isMobile ?
@@ -66,7 +66,7 @@ export default function TestimoniosSection() {
             perPage: 1,
             focus: 0,
             arrows:false,
-            
+            pagination: false,
             autoplay: true,
             pauseOnHover: false,
             pauseOnFocus: true,

@@ -5,10 +5,10 @@ import Triangle from '../Icons/Triangle'
 import ModalYT from '../modalYT/ModalYT'
 
 export default function ImgContainer({ active, slide }) {
-   
+    const isMobile = (window.innerWidth <= 768)
     return (
         <>
-            <div className='w-full'>
+            <div className={`w-full`}>
                 <div className="relative w-full transition-all duration-500" style={{ transform: `${active ? 'scale(1)' : 'scale(.8) translateY(-57px)'}` }}>
 
                     <img
@@ -23,14 +23,24 @@ export default function ImgContainer({ active, slide }) {
                 {
                     active &&
                     <div className='pt-6 fadeIn'>
-                        <h3 className='text-center pt-5'>{slide.name}</h3>
+                        <h3 className='text-center pt-5 text-[24px]' >{slide.name}</h3>
                         <p className="font-lighter text-center">{slide.text}</p>
-                        
+
                     </div>
                 }
+            
+                {
+                    isMobile &&
+                    <div className=' fadeIn'>
+                        <h3 className='text-center pt-5 text-[24px]' >{slide.name}</h3>
+                        <p className="font-lighter text-center">{slide.text}</p>
+                    </div>
+                 
+                }
+
 
             </div>
-            
+
         </>
     )
 }

@@ -72,9 +72,9 @@ export default function MisionSection() {
   }, []);
 
   return (
-    <div className='w-full pb-[15vh] pt-0 sm:pt-[10vh] flex'>
+    <div className='w-full pt-[50px] pb-[15vh] pt-0 sm:pt-[10vh] flex'>
       <div className="px-4 sm:px-[10rem] w-full h-full overflow-hidden items-center flex justify-center flex-col relative">
-        <div className="w-full sm:w-fit ">
+        <div className="w-full lg:w-fit ">
 
           <h2 className="text-3xl text-secondary">
             Nuestra misión

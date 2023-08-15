@@ -29,7 +29,7 @@ export default function DescriptionSection() {
   ]
   return (
     <div className="w-full h-full flex justify-center items-center relative z-20 transform translate-y-[-50px]  sm:translate-y-[-120px] overflow-x-auto">
-      <article className='grid-cols-3 grid rounded-[10px] px-[40px] bg-white'>
+      <article className='grid-cols-3  grid rounded-[10px] lg:gap-[50px] px-[40px] bg-white'>
         {
           cards.map((card, index) => (
             <div className='col-span-3 md:col-span-1 max-w-[320px]  text-primary'

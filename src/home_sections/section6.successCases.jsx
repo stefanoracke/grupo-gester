@@ -71,7 +71,7 @@ export default function SuccessCasesSection() {
         <div className="grid grid-cols-3 gap-5 justify-items-center items-center px-4">
           {
             cards.map((card, index) => 
-             ( <div className="col-span-3 sm:col-span-1 flex w-full"
+             ( <div className="col-span-3 lg:col-span-1 flex w-full"
               key={index+'cardSuccess'}>
                 <BoxWhite
                   icon={card.icon}

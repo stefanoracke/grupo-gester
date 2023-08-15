@@ -50,11 +50,11 @@ export default function Nosotros() {
             <h3 className="text-4xl text-secondary">
                 Nuestro Equipo
             </h3>
-            <p className='pt-2 max-w-[700px] text-center text-[20px]'>
+            <p className='pt-2 max-w-[700px] px-[20px] text-center text-[20px]'>
                 <strong>
-                    Nos enfocamos en tu asesoría de manera integral. 
+                    Nos enfocamos en tu asesoría de manera integral 
                 </strong>
-                 <span className='pl-2'>Contamos con un equipo de profesionales preparado para resolver conflictos en ambientes legales, técnicos y gerenciales.</span>
+                 <span className='pl-2'>Contamos con un equipo de profesionales preparado para resolver conflictos en ambientes legales, técnicos y gerenciales</span>
             </p>
             <div className="grid grid-cols-4 gap-[20px] mt-[50px]">
 

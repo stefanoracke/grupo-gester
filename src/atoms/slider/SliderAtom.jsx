@@ -19,25 +19,25 @@ import Odogan from '../modalYT/Odogan'
 
 
 export default function SliderAtom() {
-    
+    const [isMobile, setIsMobile] = useState(false)
 
     const slides = [
 
         {
             name: 'Edificio Tower Sur',
-            text: 'Obra culminada en Septiembre de 2022.',
+            text: 'Obra culminada en Septiembre de 2022',
             image: slide1,
             video: <TowerSur />
         },
         {
             name: 'Torre Flus',
-            text: 'Obra culminada en Diciembre de 2022.',
+            text: 'Obra culminada en Diciembre de 2022',
             image: slide2,
             video: <TorreFlus />
         },
         {
-            name: 'ODOGAN',
-            text: 'Fecha de Finalización: Junio 2023.',
+            name: 'Torre Odogan',
+            text: 'Fecha de Finalización: Junio 2023',
             image: slide3,
             video: <Odogan />
         }
@@ -60,6 +60,7 @@ export default function SliderAtom() {
 
     const handleSlideChange = (splide, index, prevIndex) => {
         setActiveIndex(index);
+        console.log('slideChange',index)
     };
 
     const handleSlideClick = () => {
@@ -69,25 +70,54 @@ export default function SliderAtom() {
         splideRef.current.go(nextIndex);
     };
 
+    useEffect(()=>{console.log(activeIndex)},[activeIndex])
 
+
+    useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth <= 768);
+        };
+    
+        // Initial check
+        handleResize();
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
 
 
     return (
         <div className='w-full relative cursor-grab'>
             <Splide
-                options={{
-                    rewind: true,
-                    gap: '3rem',
-                    perPage: 3,
-                    focus: 1,
-                    perMove: 1,
-                    autoplay: true,
-                    pauseOnHover: true,
-                    pauseOnFocus: true,
-                    type: 'loop',
-                    arrows: false
-
-                }}
+                options={isMobile ? 
+                    {
+                        pagination: false,
+                        perPage: 1,
+                        autoplay: true,
+                        type: 'loop',
+                       height:'auto',
+                       width: '400px',
+                        arrows: false
+    
+                    }
+                    :
+                    {
+                        rewind: true,
+                        gap: '3rem',
+                        perPage: 3,
+                        focus: 1,
+                        perMove: 1,
+                        autoplay: true,
+                        pauseOnHover: true,
+                        pauseOnFocus: true,
+                        type: 'loop',
+                        arrows: false
+    
+                    }
+                   }
                 aria-label="My Favorite Images"
                 ref={splideRef}
                 onMove={handleSlideChange}
@@ -96,10 +126,10 @@ export default function SliderAtom() {
                 {
                     slides.map((slide, index) => (
 
-                        <SplideSlide onClick={() => { handleSlideClick }} key={'slide' + index}>
-                            <div className="flex cursor-grab justify-center">
+                        <SplideSlide onClick={() => { handleSlideClick }}  key={'slide' + index}>
+                            <div className="flex cursor-grab lg:justify-center">
 
-                                <ImgContainer active={index === activeIndex} slide={slide} />
+                                <ImgContainer  active={index === activeIndex} slide={slide} />
                             </div>
                         </SplideSlide>
                     ))

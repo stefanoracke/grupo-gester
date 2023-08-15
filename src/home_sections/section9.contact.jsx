@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 import phone from '/src/assets/icons/contactForm/icon-telefono.svg'
 import email from '/src/assets/icons/contactForm/icon-mail.svg'
@@ -6,17 +6,17 @@ import soporte from '/src/assets/icons/contactForm/soporte.svg'
 
 import ContactForm from '../atoms/ContactForm'
 export default function ContactSection() {
-  
+
   return (
-    <div className='flex justify-center flex-col  relative  items-center pb-12'>
+    <div className='flex justify-center flex-col grid relative pt-[70px] lg:pt-0 items-center pb-12'>
       <span className='shadow-light absolute left-[-50%]'></span>
       <span className='shadow-light absolute right-[-50%]'></span>
 
-      <div className="grid w-full grid-cols-2 max-w-[1300px] sm:p-[50px] lg:mb-[50px] p-[20px] z-10">
-        <div className="col-span-2 ps-5 sm:col-span-1 ">
+      <div className="grid w-full lg:col-span-1 col-span-2 grid-cols-2 max-w-[1300px] sm:p-[50px] lg:mb-[50px] p-[20px] z-10">
+        <div className="col-span-2 px-5 lg:col-span-1 ">
           <h2 className='text-4xl'> Contactanos</h2>
           <p className='font-bold tracking-wide pt-2'>
-            Estamos para ayudarte.
+            Estamos para ayudarte
           </p>
           <p className="font-light tracking-wide max-w-[370px] pt-2">
             Si te gustaría recibir asesoramiento, no dudes en contactarnos.
@@ -24,7 +24,7 @@ export default function ContactSection() {
           <p className="font-light tracking-wide max-w-[370px] pt-2">
             Podés completar este formulario o comunicarte con nosotros telefónicamente o por e-email.
           </p>
-          <div className="grid grid-cols-2 gap-3 mt-10 sm:mt-[35px]">
+          <div className="grid grid-cols-2 gap-4 mt-10 sm:mt-[35px]">
             <div className="flex col-span-2 sm:col-span-1">
               <span className="min-w-[40px] max-h-[40px] bg-lb rounded-full flex justify-center items-center">
                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,8 +69,8 @@ export default function ContactSection() {
           </div>
 
         </div>
-        <div className="col-span-2 md:col-span-1 md:pt-0 pt-10">
-          <ContactForm/>
+        <div className="col-span-2 mt-5 lg:mt-0 lg:col-span-1 px-[20px] md:pt-0 pt-10">
+          <ContactForm />
         </div>
       </div>
     </div>

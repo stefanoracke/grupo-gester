@@ -1,0 +1,11 @@
+@media (max-width:900px) {
+    
+    svg#navLogo path{
+        display: none;
+    }
+
+    svg#navLogo path#Logo{
+        display: inline !important;
+        transform: scale(.85);
+    }
+}
